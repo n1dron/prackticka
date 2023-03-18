@@ -24,7 +24,7 @@ namespace prackticka
         {
             int id = (int)BuyersCombobox.SelectedValue;
             short Library = Convert.ToInt16(Library_visits.Text);
-            short Book = Convert.ToInt16(Library_visits.Text);
+            short Book = Convert.ToInt16(AllBooks_buy.Text);
             buy.InsertQueryy(NameTbx.Text,Library,Book, id);
             BuyersGrid.ItemsSource = buy.GetData();
         }

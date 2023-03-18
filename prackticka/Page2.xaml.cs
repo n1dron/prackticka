@@ -27,6 +27,5 @@ namespace prackticka
             book.InsertQuery(NameTbx.Text, Price1, id);
             BookGrid.ItemsSource = book.GetData();
         }
-
     }
 }
