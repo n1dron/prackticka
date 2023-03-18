@@ -14,5 +14,7 @@
         <TextBox x:Name="NameTbx" HorizontalAlignment="Left" Margin="76,241,0,0" TextWrapping="Wrap" Text="Название книги" VerticalAlignment="Top" Width="451" Height="32"/>
         <ComboBox x:Name="BooksCombobox" HorizontalAlignment="Left" Margin="554,241,0,0" VerticalAlignment="Top" Width="120" Height="32"/>
         <TextBox x:Name="Price" HorizontalAlignment="Left" Margin="226,192,0,0" TextWrapping="Wrap" Text="Цена" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Author" HorizontalAlignment="Left" Margin="374,192,0,0" TextWrapping="Wrap" Text="Автор" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="554,278,0,0" VerticalAlignment="Top" Height="37" Width="120" Click="Button_Click_1"/>
     </Grid>
 </Page>

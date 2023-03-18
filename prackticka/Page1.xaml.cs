@@ -1,5 +1,6 @@
 ﻿using prackticka.DataSet1TableAdapters;
 using System;
+using System.Data;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -27,6 +28,13 @@ namespace prackticka
             short Book = Convert.ToInt16(AllBooks_buy.Text);
             buy.InsertQueryy(NameTbx.Text,Library,Book, id);
             BuyersGrid.ItemsSource = buy.GetData();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            int id = (int)(BuyersGrid.SelectedItem as DataRowView).Row[0];
+            buy.DeleteQueryy(id);
+            BuyersGrid.ItemsSource= buy.GetData();
         }
     }
 }

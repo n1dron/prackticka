@@ -26,9 +26,9 @@ namespace prackticka {
         
         private BuyersDataTable tableBuyers;
         
-        private Book1DataTable tableBook1;
+        private BookDataTable tableBook;
         
-        private global::System.Data.DataRelation relationFK__Buyers__Bookid__398D8EEE1;
+        private global::System.Data.DataRelation relationFK__Buyers__Bookid__398D8EEE;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -61,8 +61,8 @@ namespace prackticka {
                 if ((ds.Tables["Buyers"] != null)) {
                     base.Tables.Add(new BuyersDataTable(ds.Tables["Buyers"]));
                 }
-                if ((ds.Tables["Book1"] != null)) {
-                    base.Tables.Add(new Book1DataTable(ds.Tables["Book1"]));
+                if ((ds.Tables["Book"] != null)) {
+                    base.Tables.Add(new BookDataTable(ds.Tables["Book"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -96,9 +96,9 @@ namespace prackticka {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Book1DataTable Book1 {
+        public BookDataTable Book {
             get {
-                return this.tableBook1;
+                return this.tableBook;
             }
         }
         
@@ -172,8 +172,8 @@ namespace prackticka {
                 if ((ds.Tables["Buyers"] != null)) {
                     base.Tables.Add(new BuyersDataTable(ds.Tables["Buyers"]));
                 }
-                if ((ds.Tables["Book1"] != null)) {
-                    base.Tables.Add(new Book1DataTable(ds.Tables["Book1"]));
+                if ((ds.Tables["Book"] != null)) {
+                    base.Tables.Add(new BookDataTable(ds.Tables["Book"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -214,13 +214,13 @@ namespace prackticka {
                     this.tableBuyers.InitVars();
                 }
             }
-            this.tableBook1 = ((Book1DataTable)(base.Tables["Book1"]));
+            this.tableBook = ((BookDataTable)(base.Tables["Book"]));
             if ((initTable == true)) {
-                if ((this.tableBook1 != null)) {
-                    this.tableBook1.InitVars();
+                if ((this.tableBook != null)) {
+                    this.tableBook.InitVars();
                 }
             }
-            this.relationFK__Buyers__Bookid__398D8EEE1 = this.Relations["FK__Buyers__Bookid__398D8EEE1"];
+            this.relationFK__Buyers__Bookid__398D8EEE = this.Relations["FK__Buyers__Bookid__398D8EEE"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -233,12 +233,12 @@ namespace prackticka {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableBuyers = new BuyersDataTable();
             base.Tables.Add(this.tableBuyers);
-            this.tableBook1 = new Book1DataTable();
-            base.Tables.Add(this.tableBook1);
-            this.relationFK__Buyers__Bookid__398D8EEE1 = new global::System.Data.DataRelation("FK__Buyers__Bookid__398D8EEE1", new global::System.Data.DataColumn[] {
-                        this.tableBook1.idColumn}, new global::System.Data.DataColumn[] {
+            this.tableBook = new BookDataTable();
+            base.Tables.Add(this.tableBook);
+            this.relationFK__Buyers__Bookid__398D8EEE = new global::System.Data.DataRelation("FK__Buyers__Bookid__398D8EEE", new global::System.Data.DataColumn[] {
+                        this.tableBook.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableBuyers.BookidColumn}, false);
-            this.Relations.Add(this.relationFK__Buyers__Bookid__398D8EEE1);
+            this.Relations.Add(this.relationFK__Buyers__Bookid__398D8EEE);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -249,7 +249,7 @@ namespace prackticka {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeBook1() {
+        private bool ShouldSerializeBook() {
             return false;
         }
         
@@ -312,7 +312,7 @@ namespace prackticka {
         public delegate void BuyersRowChangeEventHandler(object sender, BuyersRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void Book1RowChangeEventHandler(object sender, Book1RowChangeEvent e);
+        public delegate void BookRowChangeEventHandler(object sender, BookRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -441,7 +441,7 @@ namespace prackticka {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public BuyersRow AddBuyersRow(string Name, short Library_visits, short AllBooks_buy, Book1Row parentBook1RowByFK__Buyers__Bookid__398D8EEE1) {
+            public BuyersRow AddBuyersRow(string Name, short Library_visits, short AllBooks_buy, BookRow parentBookRowByFK__Buyers__Bookid__398D8EEE) {
                 BuyersRow rowBuyersRow = ((BuyersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -449,8 +449,8 @@ namespace prackticka {
                         Library_visits,
                         AllBooks_buy,
                         null};
-                if ((parentBook1RowByFK__Buyers__Bookid__398D8EEE1 != null)) {
-                    columnValuesArray[4] = parentBook1RowByFK__Buyers__Bookid__398D8EEE1[0];
+                if ((parentBookRowByFK__Buyers__Bookid__398D8EEE != null)) {
+                    columnValuesArray[4] = parentBookRowByFK__Buyers__Bookid__398D8EEE[0];
                 }
                 rowBuyersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowBuyersRow);
@@ -645,7 +645,7 @@ namespace prackticka {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Book1DataTable : global::System.Data.TypedTableBase<Book1Row> {
+        public partial class BookDataTable : global::System.Data.TypedTableBase<BookRow> {
             
             private global::System.Data.DataColumn columnid;
             
@@ -657,8 +657,8 @@ namespace prackticka {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Book1DataTable() {
-                this.TableName = "Book1";
+            public BookDataTable() {
+                this.TableName = "Book";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -666,7 +666,7 @@ namespace prackticka {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Book1DataTable(global::System.Data.DataTable table) {
+            internal BookDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -683,7 +683,7 @@ namespace prackticka {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected Book1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BookDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -731,55 +731,55 @@ namespace prackticka {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Book1Row this[int index] {
+            public BookRow this[int index] {
                 get {
-                    return ((Book1Row)(this.Rows[index]));
+                    return ((BookRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Book1RowChangeEventHandler Book1RowChanging;
+            public event BookRowChangeEventHandler BookRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Book1RowChangeEventHandler Book1RowChanged;
+            public event BookRowChangeEventHandler BookRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Book1RowChangeEventHandler Book1RowDeleting;
+            public event BookRowChangeEventHandler BookRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Book1RowChangeEventHandler Book1RowDeleted;
+            public event BookRowChangeEventHandler BookRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddBook1Row(Book1Row row) {
+            public void AddBookRow(BookRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Book1Row AddBook1Row(string Name, short Price, string Author) {
-                Book1Row rowBook1Row = ((Book1Row)(this.NewRow()));
+            public BookRow AddBookRow(string Name, short Price, string Author) {
+                BookRow rowBookRow = ((BookRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Name,
                         Price,
                         Author};
-                rowBook1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBook1Row);
-                return rowBook1Row;
+                rowBookRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBookRow);
+                return rowBookRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Book1Row FindByid(int id) {
-                return ((Book1Row)(this.Rows.Find(new object[] {
+            public BookRow FindByid(int id) {
+                return ((BookRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Book1DataTable cln = ((Book1DataTable)(base.Clone()));
+                BookDataTable cln = ((BookDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -787,7 +787,7 @@ namespace prackticka {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Book1DataTable();
+                return new BookDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -827,28 +827,28 @@ namespace prackticka {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Book1Row NewBook1Row() {
-                return ((Book1Row)(this.NewRow()));
+            public BookRow NewBookRow() {
+                return ((BookRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Book1Row(builder);
+                return new BookRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Book1Row);
+                return typeof(BookRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Book1RowChanged != null)) {
-                    this.Book1RowChanged(this, new Book1RowChangeEvent(((Book1Row)(e.Row)), e.Action));
+                if ((this.BookRowChanged != null)) {
+                    this.BookRowChanged(this, new BookRowChangeEvent(((BookRow)(e.Row)), e.Action));
                 }
             }
             
@@ -856,8 +856,8 @@ namespace prackticka {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Book1RowChanging != null)) {
-                    this.Book1RowChanging(this, new Book1RowChangeEvent(((Book1Row)(e.Row)), e.Action));
+                if ((this.BookRowChanging != null)) {
+                    this.BookRowChanging(this, new BookRowChangeEvent(((BookRow)(e.Row)), e.Action));
                 }
             }
             
@@ -865,8 +865,8 @@ namespace prackticka {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Book1RowDeleted != null)) {
-                    this.Book1RowDeleted(this, new Book1RowChangeEvent(((Book1Row)(e.Row)), e.Action));
+                if ((this.BookRowDeleted != null)) {
+                    this.BookRowDeleted(this, new BookRowChangeEvent(((BookRow)(e.Row)), e.Action));
                 }
             }
             
@@ -874,14 +874,14 @@ namespace prackticka {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Book1RowDeleting != null)) {
-                    this.Book1RowDeleting(this, new Book1RowChangeEvent(((Book1Row)(e.Row)), e.Action));
+                if ((this.BookRowDeleting != null)) {
+                    this.BookRowDeleting(this, new BookRowChangeEvent(((BookRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveBook1Row(Book1Row row) {
+            public void RemoveBookRow(BookRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -908,7 +908,7 @@ namespace prackticka {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Book1DataTable";
+                attribute2.FixedValue = "BookDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1020,12 +1020,12 @@ namespace prackticka {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Book1Row Book1Row {
+            public BookRow BookRow {
                 get {
-                    return ((Book1Row)(this.GetParentRow(this.Table.ParentRelations["FK__Buyers__Bookid__398D8EEE1"])));
+                    return ((BookRow)(this.GetParentRow(this.Table.ParentRelations["FK__Buyers__Bookid__398D8EEE"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Buyers__Bookid__398D8EEE1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Buyers__Bookid__398D8EEE"]);
                 }
             }
         }
@@ -1033,25 +1033,25 @@ namespace prackticka {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Book1Row : global::System.Data.DataRow {
+        public partial class BookRow : global::System.Data.DataRow {
             
-            private Book1DataTable tableBook1;
+            private BookDataTable tableBook;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Book1Row(global::System.Data.DataRowBuilder rb) : 
+            internal BookRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableBook1 = ((Book1DataTable)(this.Table));
+                this.tableBook = ((BookDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int id {
                 get {
-                    return ((int)(this[this.tableBook1.idColumn]));
+                    return ((int)(this[this.tableBook.idColumn]));
                 }
                 set {
-                    this[this.tableBook1.idColumn] = value;
+                    this[this.tableBook.idColumn] = value;
                 }
             }
             
@@ -1059,10 +1059,10 @@ namespace prackticka {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Name {
                 get {
-                    return ((string)(this[this.tableBook1.NameColumn]));
+                    return ((string)(this[this.tableBook.NameColumn]));
                 }
                 set {
-                    this[this.tableBook1.NameColumn] = value;
+                    this[this.tableBook.NameColumn] = value;
                 }
             }
             
@@ -1070,10 +1070,10 @@ namespace prackticka {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public short Price {
                 get {
-                    return ((short)(this[this.tableBook1.PriceColumn]));
+                    return ((short)(this[this.tableBook.PriceColumn]));
                 }
                 set {
-                    this[this.tableBook1.PriceColumn] = value;
+                    this[this.tableBook.PriceColumn] = value;
                 }
             }
             
@@ -1081,21 +1081,21 @@ namespace prackticka {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Author {
                 get {
-                    return ((string)(this[this.tableBook1.AuthorColumn]));
+                    return ((string)(this[this.tableBook.AuthorColumn]));
                 }
                 set {
-                    this[this.tableBook1.AuthorColumn] = value;
+                    this[this.tableBook.AuthorColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public BuyersRow[] GetBuyersRows() {
-                if ((this.Table.ChildRelations["FK__Buyers__Bookid__398D8EEE1"] == null)) {
+                if ((this.Table.ChildRelations["FK__Buyers__Bookid__398D8EEE"] == null)) {
                     return new BuyersRow[0];
                 }
                 else {
-                    return ((BuyersRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Buyers__Bookid__398D8EEE1"])));
+                    return ((BuyersRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Buyers__Bookid__398D8EEE"])));
                 }
             }
         }
@@ -1138,22 +1138,22 @@ namespace prackticka {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class Book1RowChangeEvent : global::System.EventArgs {
+        public class BookRowChangeEvent : global::System.EventArgs {
             
-            private Book1Row eventRow;
+            private BookRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Book1RowChangeEvent(Book1Row row, global::System.Data.DataRowAction action) {
+            public BookRowChangeEvent(BookRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Book1Row Row {
+            public BookRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1347,20 +1347,25 @@ SELECT Id, Name, Library_visits, AllBooks_buy, Bookid FROM Buyers WHERE (Id = @I
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Id, Name, Library_visits, AllBooks_buy, Bookid FROM dbo.Buyers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[Buyers] ([Name], [Library_visits], [AllBooks_buy], [Bookid]) V" +
-                "ALUES (@Name, @Library_visits, @AllBooks_buy, @Bookid);\r\n";
+            this._commandCollection[1].CommandText = "DELETE FROM Buyers\r\nWHERE  (Id = @Original_Id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Library_visits", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 0, 0, "Library_visits", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AllBooks_buy", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 0, 0, "AllBooks_buy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bookid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Bookid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[Buyers] ([Name], [Library_visits], [AllBooks_buy], [Bookid]) V" +
+                "ALUES (@Name, @Library_visits, @AllBooks_buy, @Bookid);\r\n";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Library_visits", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 0, 0, "Library_visits", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AllBooks_buy", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 0, 0, "AllBooks_buy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bookid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Bookid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1529,9 +1534,33 @@ SELECT Id, Name, Library_visits, AllBooks_buy, Bookid FROM Buyers WHERE (Id = @I
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQueryy(int Original_Id) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(Original_Id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertQueryy(string Name, short Library_visits, short AllBooks_buy, int Bookid) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
@@ -1679,7 +1708,7 @@ SELECT Id, Name, Library_visits, AllBooks_buy, Bookid FROM Buyers WHERE (Id = @I
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Book1";
+            tableMapping.DataSetTable = "Book";
             tableMapping.ColumnMappings.Add("id", "id");
             tableMapping.ColumnMappings.Add("Name", "Name");
             tableMapping.ColumnMappings.Add("Price", "Price");
@@ -1727,26 +1756,31 @@ SELECT id, Name, Price, Author FROM Book WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, Name, Price, Author FROM dbo.Book";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[Book] ([Name], [Price], [Author]) VALUES (@Name, @Price, @Auth" +
-                "or);\r\n";
+            this._commandCollection[1].CommandText = "DELETE FROM Book\r\nWHERE  (id = @Original_id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Author", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Author", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[Book] ([Name], [Price], [Author]) VALUES (@Name, @Price, @Auth" +
+                "or);\r\n";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.SmallInt, 2, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Author", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Author", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.Book1DataTable dataTable) {
+        public virtual int Fill(DataSet1.BookDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1759,9 +1793,9 @@ SELECT id, Name, Price, Author FROM Book WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.Book1DataTable GetData() {
+        public virtual DataSet1.BookDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.Book1DataTable dataTable = new DataSet1.Book1DataTable();
+            DataSet1.BookDataTable dataTable = new DataSet1.BookDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1769,7 +1803,7 @@ SELECT id, Name, Price, Author FROM Book WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1.Book1DataTable dataTable) {
+        public virtual int Update(DataSet1.BookDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1777,7 +1811,7 @@ SELECT id, Name, Price, Author FROM Book WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Book1");
+            return this.Adapter.Update(dataSet, "Book");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1924,9 +1958,33 @@ SELECT id, Name, Price, Author FROM Book WHERE (id = @id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(int Original_id) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(Original_id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertQuery(string Name, short Price, string Author) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((Name == null)) {
                 throw new global::System.ArgumentNullException("Name");
             }
@@ -2075,7 +2133,7 @@ SELECT id, Name, Price, Author FROM Book WHERE (id = @id)";
         private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._book1TableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Book1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                global::System.Data.DataRow[] updatedRows = dataSet.Book.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
@@ -2103,7 +2161,7 @@ SELECT id, Name, Price, Author FROM Book WHERE (id = @id)";
         private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._book1TableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Book1.Select(null, null, global::System.Data.DataViewRowState.Added);
+                global::System.Data.DataRow[] addedRows = dataSet.Book.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._book1TableAdapter.Update(addedRows));
@@ -2137,7 +2195,7 @@ SELECT id, Name, Price, Author FROM Book WHERE (id = @id)";
                 }
             }
             if ((this._book1TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Book1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                global::System.Data.DataRow[] deletedRows = dataSet.Book.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._book1TableAdapter.Update(deletedRows));

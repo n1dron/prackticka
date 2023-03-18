@@ -1,5 +1,6 @@
 ﻿using prackticka.DataSet1TableAdapters;
 using System;
+using System.Data;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -22,10 +23,18 @@ namespace prackticka
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string id = (string)BooksCombobox.SelectedValue;
             short Price1 = Convert.ToInt16(Price.Text);
-            book.InsertQuery(NameTbx.Text, Price1, id);
+            book.InsertQuery(NameTbx.Text, Price1,Author.Text);
             BookGrid.ItemsSource = book.GetData();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+            int id = (int)(BookGrid.SelectedItem as DataRowView).Row[0];
+            book.DeleteQuery(id);
+            BookGrid.ItemsSource = book.GetData();
+            
         }
     }
 }
