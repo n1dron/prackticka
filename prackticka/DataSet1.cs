@@ -10,3 +10,10 @@ namespace prackticka
     {
     }
 }
+
+namespace prackticka.DataSet1TableAdapters {
+    
+    
+    public partial class BuyersTableAdapter {
+    }
+}
