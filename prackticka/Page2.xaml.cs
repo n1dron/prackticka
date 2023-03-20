@@ -36,5 +36,25 @@ namespace prackticka
             BookGrid.ItemsSource = book.GetData();
             
         }
+        private void BookGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (BookGrid.SelectedItem != null)
+            {
+                var item = BookGrid.SelectedItem as DataRowView;
+                NameTbx.Text = (string)item.Row[1];
+                BooksCombobox.SelectedValue = (Convert.ToInt16(item.Row[2]));
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (BookGrid.SelectedItem != null)
+            {
+                short Price1 = Convert.ToInt16(Price.Text);
+                var item = BookGrid.SelectedItem as DataRowView;
+                book.UpdateQuery(NameTbx.Text, Price1, (string)(BooksCombobox.SelectedItem as DataRowView).Row[1], (int)item.Row[0]);
+                BookGrid.ItemsSource = book.GetData();
+            }
+        }
     }
 }

@@ -36,5 +36,26 @@ namespace prackticka
             buy.DeleteQueryy(id);
             BuyersGrid.ItemsSource= buy.GetData();
         }
+        private void BuyersGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (BuyersGrid.SelectedItem != null)
+            {
+                var item = BuyersGrid.SelectedItem as DataRowView;
+                NameTbx.Text = (string)item.Row[1];
+                BuyersCombobox.SelectedValue = (Convert.ToInt16(item.Row[2]));
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (BuyersGrid.SelectedItem != null)
+            {
+                short Library = Convert.ToInt16(Library_visits.Text);
+                short Book = Convert.ToInt16(AllBooks_buy.Text);
+                var item = BuyersGrid.SelectedItem as DataRowView;
+                buy.UpdateQuery(NameTbx.Text,Library,Book,(int) BuyersCombobox.SelectedValue, (int)item.Row[0]);
+                BuyersGrid.ItemsSource = buy.GetData();
+            }
+        }
     }
 }
